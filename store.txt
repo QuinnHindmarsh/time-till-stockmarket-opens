@@ -1,33 +1,3 @@
-MyBoxLayout:
-
-
-<MyBoxLayout>:
-    orientation: "vertical"
-    
-    Button:
-        text:"A"
-        size_hint: 0.5, 0.25
-        # x, centre x, right 
-        #y, centre y, top
-        #pos_hint: {'x':0.25} 
-        pos_hint: {'center_x':0.5}
-
-
-    Button:
-        text:"B"
-
-    Button:
-        text:"c"
-        size_hint: 1,2
-
-    Button:
-        text:"D"
-        #size_hint: 2,1
-
-
-
-
-<MainWidget>:
     Button:
         text: "Hello"
 
@@ -44,3 +14,14 @@ MyBoxLayout:
         text: "This is is a label"
         #RGB A 0-1, alpha is visability
         color: 0,0,1,1
+
+
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+        b1 = Button(text='a')
+        b2 = Button(text='b')
+
+        self.add_widget(b1)
+        self.add_widget(b2)
